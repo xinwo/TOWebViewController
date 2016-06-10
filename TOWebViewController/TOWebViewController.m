@@ -216,6 +216,7 @@
 - (void)setup
 {
     //Direct ivar reference since we don't want to trigger their actions yet
+    _showForwardBackwardButton = YES;
     _showActionButton = YES;
     _showDoneButton   = YES;
     _showLoadingBar   = YES;
@@ -548,8 +549,10 @@
         NSMutableArray *items = [NSMutableArray array];
         
         if (self.navigationButtonsHidden == NO) {
-            if (self.backButton)        { [items addObject:self.backButton]; }
-            if (self.forwardButton)     { [items addObject:self.forwardButton]; }
+            if (self.showForwardBackwardButton) {
+                if (self.backButton)        { [items addObject:self.backButton]; }
+                if (self.forwardButton)     { [items addObject:self.forwardButton]; }
+            }
             if (self.reloadStopButton)  { [items addObject:self.reloadStopButton]; }
             
             for (UIBarButtonItem *item in self.applicationBarButtonItems) {

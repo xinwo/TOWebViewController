@@ -112,6 +112,8 @@
 #endif
     
     TOWebViewController *webViewController = [[TOWebViewController alloc] initWithURL:url];
+    webViewController.showForwardBackwardButton = NO;
+    webViewController.showActionButton = NO;
 #ifdef TO_ONEPASSWORD_EXAMPLE
     webViewController.showOnePasswordButton = YES;
 #endif

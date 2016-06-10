@@ -112,6 +112,13 @@
 @property (nonatomic,copy)      NSArray *loadCompletedApplicationBarButtonItems;
 
 /**
+ Shows Forward Backward button, which when tapped, webview goes forward and backward
+ 
+ Default value is YES.
+ */
+@property (nonatomic,assign)    BOOL showForwardBackwardButton;
+
+/**
  Shows the iOS 'Activty' button, which when tapped, presents a series of actions the user may
  take, including copying the page URL, tweeting the URL, or switching to Safari or Chrome.
  
